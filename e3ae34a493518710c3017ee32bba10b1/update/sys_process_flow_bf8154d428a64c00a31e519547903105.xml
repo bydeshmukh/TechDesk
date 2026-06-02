@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_process_flow">
+  <sys_process_flow action="INSERT_OR_UPDATE">
+    <sys_id>bf8154d428a64c00a31e519547903105</sys_id>
+    <sys_scope display_value="x_848842_techdesk">e3ae34a493518710c3017ee32bba10b1</sys_scope>
+    <sys_update_name>sys_process_flow_bf8154d428a64c00a31e519547903105</sys_update_name>
+    <active>true</active>
+    <condition>state=approved^EQ</condition>
+    <label>Approved</label>
+    <name>TechDesk Request - Approved</name>
+    <order>400</order>
+    <table>x_848842_techdesk_request</table>
+  </sys_process_flow>
+</record_update>

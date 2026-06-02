@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_process_flow">
+  <sys_process_flow action="INSERT_OR_UPDATE">
+    <sys_id>635b9194413d46cbb3b35680424bc0b9</sys_id>
+    <sys_scope display_value="x_848842_techdesk">e3ae34a493518710c3017ee32bba10b1</sys_scope>
+    <sys_update_name>sys_process_flow_635b9194413d46cbb3b35680424bc0b9</sys_update_name>
+    <active>true</active>
+    <condition>state=draft^EQ</condition>
+    <label>Draft</label>
+    <name>TechDesk Request - Draft</name>
+    <order>100</order>
+    <table>x_848842_techdesk_request</table>
+  </sys_process_flow>
+</record_update>

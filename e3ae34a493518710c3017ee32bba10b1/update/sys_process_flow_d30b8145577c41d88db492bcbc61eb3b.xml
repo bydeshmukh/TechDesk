@@ -1,13 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sys_process_flow">
-  <sys_process_flow action="INSERT_OR_UPDATE">
-    <sys_id>d30b8145577c41d88db492bcbc61eb3b</sys_id>
-    <sys_scope display_value="x_848842_techdesk">e3ae34a493518710c3017ee32bba10b1</sys_scope>
-    <sys_update_name>sys_process_flow_d30b8145577c41d88db492bcbc61eb3b</sys_update_name>
-    <active>true</active>
-    <condition>state=in_fulfillment^EQ</condition>
-    <label>In Fulfillment</label>
-    <name>TechDesk Request - In Fulfillment</name>
-    <order>500</order>
-    <table>x_848842_techdesk_request</table>
-  </sys_process_flow>
+    <sys_process_flow action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <condition table="x_848842_techdesk_request">state=in_fulfillment^EQ<item display_value="In Fulfillment" endquery="false" field="state" goto="false" newquery="false" operator="=" or="false" value="in_fulfillment"/>
+            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </condition>
+        <description/>
+        <label>In Fulfillment</label>
+        <name>TechDesk Request - In Fulfillment</name>
+        <order>500</order>
+        <sys_class_name>sys_process_flow</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-06-02 16:10:44</sys_created_on>
+        <sys_id>d30b8145577c41d88db492bcbc61eb3b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>TechDesk Request - In Fulfillment</sys_name>
+        <sys_package display_value="TechDesk" source="x_848842_techdesk">e3ae34a493518710c3017ee32bba10b1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="TechDesk">e3ae34a493518710c3017ee32bba10b1</sys_scope>
+        <sys_update_name>sys_process_flow_d30b8145577c41d88db492bcbc61eb3b</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-06-02 16:10:44</sys_updated_on>
+        <table>x_848842_techdesk_request</table>
+    </sys_process_flow>
 </record_update>

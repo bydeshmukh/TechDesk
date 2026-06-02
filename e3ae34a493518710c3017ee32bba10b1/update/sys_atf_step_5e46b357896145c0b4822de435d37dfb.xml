@@ -1,65 +1,115 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sys_atf_step">
-  <sys_atf_step action="INSERT_OR_UPDATE">
-    <sys_id>5e46b357896145c0b4822de435d37dfb</sys_id>
-    <sys_scope display_value="x_848842_techdesk">e3ae34a493518710c3017ee32bba10b1</sys_scope>
-    <active>true</active>
-    <description/>
-    <display_name>Record Update</display_name>
-    <notes/>
-    <order>2</order>
-    <step_config>17a72288df60220062fe6c7a4df26397</step_config>
-    <table>x_848842_techdesk_request</table>
-    <test>87677c5db6f14c25acb707a21a5f3d00</test>
-    <timeout/>
-    <warning_message/>
-  </sys_atf_step>
-  <sys_variable_value action="delete_multiple" query="document_key=5e46b357896145c0b4822de435d37dfb"/>
-  <sys_variable_value action="INSERT_OR_UPDATE">
-    <sys_id>2dca06a211784ce9bae8de6cb1747358</sys_id>
-    <document>sys_atf_step</document>
-    <document_key>5e46b357896145c0b4822de435d37dfb</document_key>
-    <value>record_successfully_updated</value>
-    <variable>334b7bb7675003007ba405225685ef72</variable>
-    <order>100</order>
-  </sys_variable_value>
-  <sys_variable_value action="INSERT_OR_UPDATE">
-    <sys_id>9a815b9fbda94671a60ef7dbf89889dd</sys_id>
-    <document>sys_atf_step</document>
-    <document_key>5e46b357896145c0b4822de435d37dfb</document_key>
-    <value>0</value>
-    <variable>46dbcb535320220002c6435723dc3409</variable>
-    <order>100</order>
-  </sys_variable_value>
-  <sys_variable_value action="INSERT_OR_UPDATE">
-    <sys_id>d5cb7988928b4d7592107d0ee8c40deb</sys_id>
-    <document>sys_atf_step</document>
-    <document_key>5e46b357896145c0b4822de435d37dfb</document_key>
-    <value>{{step['8e3a077d01ee4d1db802478d7aab5463'].record_id}}</value>
-    <variable>501c8f535320220002c6435723dc34da</variable>
-    <order>300</order>
-  </sys_variable_value>
-  <sys_variable_value action="INSERT_OR_UPDATE">
-    <sys_id>30ce665f28a54b24b9248e732738ebdf</sys_id>
-    <document>sys_atf_step</document>
-    <document_key>5e46b357896145c0b4822de435d37dfb</document_key>
-    <value>x_848842_techdesk_request</value>
-    <variable>53fb0f535320220002c6435723dc34ec</variable>
-    <order>200</order>
-  </sys_variable_value>
-  <sys_variable_value action="INSERT_OR_UPDATE">
-    <sys_id>fce1cf293f8d4a9799723f2965324198</sys_id>
-    <document>sys_atf_step</document>
-    <document_key>5e46b357896145c0b4822de435d37dfb</document_key>
-    <value>state=submitted^EQ</value>
-    <variable>bc4c43935320220002c6435723dc34a2</variable>
-    <order>400</order>
-  </sys_variable_value>
-  <sys_element_mapping action="delete_multiple" query="id=5e46b357896145c0b4822de435d37dfb"/>
-  <sys_element_mapping action="INSERT_OR_UPDATE">
-    <sys_id>a28b3ee36cf6400b808ca945482bb68a</sys_id>
-    <field>record_id</field>
-    <id>5e46b357896145c0b4822de435d37dfb</id>
-    <table>var__m_atf_input_variable_17a72288df60220062fe6c7a4df26397</table>
-    <value>{{step['8e3a077d01ee4d1db802478d7aab5463'].record_id}}</value>
-  </sys_element_mapping>
+    <sys_atf_step action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <callable_outputs/>
+        <copied_from/>
+        <description/>
+        <display_name>Record Update</display_name>
+        <inputs/>
+        <inputs/>
+        <mugshots_cache_json/>
+        <notes/>
+        <order>2</order>
+        <step_config display_value="Record Update">17a72288df60220062fe6c7a4df26397</step_config>
+        <sys_class_name>sys_atf_step</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-06-02 10:45:10</sys_created_on>
+        <sys_id>5e46b357896145c0b4822de435d37dfb</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Record Update</sys_name>
+        <sys_package display_value="TechDesk" source="x_848842_techdesk">e3ae34a493518710c3017ee32bba10b1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="TechDesk">e3ae34a493518710c3017ee32bba10b1</sys_scope>
+        <sys_update_name>sys_atf_step_5e46b357896145c0b4822de435d37dfb</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-06-02 10:45:10</sys_updated_on>
+        <table>x_848842_techdesk_request</table>
+        <test display_value="Request State Change Test">87677c5db6f14c25acb707a21a5f3d00</test>
+        <timeout/>
+        <warning_message/>
+    </sys_atf_step>
+    <sys_variable_value action="delete_multiple" query="document_key=5e46b357896145c0b4822de435d37dfb"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_atf_step</document>
+        <document_key>5e46b357896145c0b4822de435d37dfb</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-06-02 16:10:34</sys_created_on>
+        <sys_id>2dca06a211784ce9bae8de6cb1747358</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-06-02 16:10:34</sys_updated_on>
+        <value>record_successfully_updated</value>
+        <variable display_value="Assert type">334b7bb7675003007ba405225685ef72</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_atf_step</document>
+        <document_key>5e46b357896145c0b4822de435d37dfb</document_key>
+        <order>200</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-06-02 16:10:34</sys_created_on>
+        <sys_id>30ce665f28a54b24b9248e732738ebdf</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-06-02 16:10:34</sys_updated_on>
+        <value>x_848842_techdesk_request</value>
+        <variable display_value="Table">53fb0f535320220002c6435723dc34ec</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_atf_step</document>
+        <document_key>5e46b357896145c0b4822de435d37dfb</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-06-02 16:10:34</sys_created_on>
+        <sys_id>9a815b9fbda94671a60ef7dbf89889dd</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-06-02 16:10:34</sys_updated_on>
+        <value>0</value>
+        <variable display_value="Enforce security">46dbcb535320220002c6435723dc3409</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_atf_step</document>
+        <document_key>5e46b357896145c0b4822de435d37dfb</document_key>
+        <order>300</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-06-02 16:10:34</sys_created_on>
+        <sys_id>d5cb7988928b4d7592107d0ee8c40deb</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-06-02 16:10:34</sys_updated_on>
+        <value>{{step['8e3a077d01ee4d1db802478d7aab5463'].record_id}}</value>
+        <variable display_value="Record">501c8f535320220002c6435723dc34da</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_atf_step</document>
+        <document_key>5e46b357896145c0b4822de435d37dfb</document_key>
+        <order>400</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-06-02 16:10:34</sys_created_on>
+        <sys_id>fce1cf293f8d4a9799723f2965324198</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-06-02 16:10:34</sys_updated_on>
+        <value>state=submitted^EQ</value>
+        <variable display_value="Field values">bc4c43935320220002c6435723dc34a2</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=5e46b357896145c0b4822de435d37dfb"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>record_id</field>
+        <id>5e46b357896145c0b4822de435d37dfb</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-06-02 16:10:34</sys_created_on>
+        <sys_id>a28b3ee36cf6400b808ca945482bb68a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-06-02 16:10:34</sys_updated_on>
+        <table>var__m_atf_input_variable_17a72288df60220062fe6c7a4df26397</table>
+        <value>{{step['8e3a077d01ee4d1db802478d7aab5463'].record_id}}</value>
+    </sys_element_mapping>
 </record_update>

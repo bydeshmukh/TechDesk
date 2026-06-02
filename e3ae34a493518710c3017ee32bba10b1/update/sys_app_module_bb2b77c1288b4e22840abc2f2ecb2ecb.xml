@@ -1,15 +1,46 @@
-<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_app_module">
-  <sys_app_module action="INSERT_OR_UPDATE">
-    <sys_id>bb2b77c1288b4e22840abc2f2ecb2ecb</sys_id>
-    <sys_scope display_value="x_848842_techdesk">e3ae34a493518710c3017ee32bba10b1</sys_scope>
-    <sys_update_name>sys_app_module_bb2b77c1288b4e22840abc2f2ecb2ecb</sys_update_name>
-    <active>true</active>
-    <application>9d84c84ae7f3443dbde821fca4aea63d</application>
-    <hint>Manage portal announcements</hint>
-    <link_type>LIST</link_type>
-    <name>x_848842_techdesk_announcement</name>
-    <order>1000</order>
-    <roles>x_848842_techdesk.admin,x_848842_techdesk.manager</roles>
-    <title>Announcements</title>
-  </sys_app_module>
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_app_module">
+    <sys_app_module action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <application display_value="TechDesk">9d84c84ae7f3443dbde821fca4aea63d</application>
+        <assessment/>
+        <device_type/>
+        <filter/>
+        <hint>Manage portal announcements</hint>
+        <homepage/>
+        <image/>
+        <link_type>LIST</link_type>
+        <map_page/>
+        <mobile_title/>
+        <mobile_view_name/>
+        <name>x_848842_techdesk_announcement</name>
+        <order>1000</order>
+        <override_menu_roles>false</override_menu_roles>
+        <query/>
+        <report/>
+        <require_confirmation>false</require_confirmation>
+        <roles>x_848842_techdesk.admin,x_848842_techdesk.manager</roles>
+        <route/>
+        <screen/>
+        <sys_class_name>sys_app_module</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-06-02 15:49:30</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>bb2b77c1288b4e22840abc2f2ecb2ecb</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Announcements</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="TechDesk" source="x_848842_techdesk">e3ae34a493518710c3017ee32bba10b1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="TechDesk">e3ae34a493518710c3017ee32bba10b1</sys_scope>
+        <sys_update_name>sys_app_module_bb2b77c1288b4e22840abc2f2ecb2ecb</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-06-02 15:49:30</sys_updated_on>
+        <timeline_page/>
+        <title>Announcements</title>
+        <uncancelable>false</uncancelable>
+        <ux_list/>
+        <view_name/>
+        <window_name/>
+    </sys_app_module>
 </record_update>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element audit="true" db_object_id="61f33f1c73374cc6843d5a854446de1e" label="TechDesk Asset" name="x_848842_techdesk_asset" type="collection">
+        <element label="Warranty Expiry" max_length="40" name="warranty_expiry" type="glide_date"/>
+        <element label="Model" max_length="32" name="model" reference="cmdb_model" type="reference"/>
+        <element label="Purchase Cost" max_length="40" name="purchase_cost" type="currency"/>
+        <element label="Department" max_length="32" name="department" reference="cmn_department" type="reference"/>
+        <element label="Last Audit Date" max_length="40" name="last_audit_date" type="glide_date"/>
+        <element label="Serial Number" max_length="100" name="serial_number" type="string"/>
+        <element label="Linked Request" max_length="32" name="linked_request" reference="x_848842_techdesk_request" type="reference"/>
+        <element display="true" label="Display Name" mandatory="true" max_length="200" name="display_name" type="string"/>
+        <element label="Configuration Item" max_length="32" name="cmdb_ci" reference="cmdb_ci" type="reference"/>
+        <element label="Asset Tag" mandatory="true" max_length="20" name="asset_tag" type="string"/>
+        <element label="Depreciation End" max_length="40" name="depreciation_end" type="glide_date"/>
+        <element audit="true" label="Assigned To" max_length="32" name="assigned_to" reference="sys_user" type="reference"/>
+        <element label="Notes" max_length="40" name="notes" type="journal"/>
+        <element audit="true" choice="3" default="requested" label="Lifecycle State" max_length="40" name="lifecycle_state" type="string">
+            <choice>
+                <element inactive_on_update="false" label="Retired" value="retired"/>
+                <element inactive_on_update="false" label="Requested" value="requested"/>
+                <element inactive_on_update="false" label="Disposed" value="disposed"/>
+                <element inactive_on_update="false" label="In Repair" value="in_repair"/>
+                <element inactive_on_update="false" label="Ordered" value="ordered"/>
+                <element inactive_on_update="false" label="In Stock" value="in_stock"/>
+                <element inactive_on_update="false" label="Deployed" value="deployed"/>
+                <element inactive_on_update="false" label="Received" value="received"/>
+            </choice>
+        </element>
+        <element audit="true" label="Location" max_length="32" name="location" reference="cmn_location" type="reference"/>
+        <element choice="1" label="Asset Type" max_length="40" name="asset_type" type="string">
+            <choice>
+                <element inactive_on_update="false" label="Mobile" value="mobile"/>
+                <element inactive_on_update="false" label="Peripheral" value="peripheral"/>
+                <element inactive_on_update="false" label="Software License" value="software_license"/>
+                <element inactive_on_update="false" label="Server" value="server"/>
+                <element inactive_on_update="false" label="Other" value="other"/>
+                <element inactive_on_update="false" label="Desktop" value="desktop"/>
+                <element inactive_on_update="false" label="Monitor" value="monitor"/>
+                <element inactive_on_update="false" label="Laptop" value="laptop"/>
+            </choice>
+        </element>
+        <element label="Purchase Date" max_length="40" name="purchase_date" type="glide_date"/>
+        <index name="index" unique="true">
+            <element name="asset_tag"/>
+        </index>
+        <index name="index2">
+            <element name="assigned_to"/>
+        </index>
+        <index name="index3">
+            <element name="cmdb_ci"/>
+        </index>
+        <index name="index4">
+            <element name="department"/>
+        </index>
+        <index name="index5">
+            <element name="linked_request"/>
+        </index>
+        <index name="index6">
+            <element name="location"/>
+        </index>
+        <index name="index7">
+            <element name="model"/>
+        </index>
+    </element>
+</database>

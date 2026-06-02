@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="c48abc0555c644899cd063e02e6f3ede" label="TechDesk Sync Log" name="x_848842_techdesk_sync_log" type="collection">
+        <element label="Error Message" max_length="4000" name="error_message" type="string"/>
+        <element display="true" label="Asset" max_length="32" name="asset" reference="x_848842_techdesk_asset" type="reference"/>
+        <element label="Attempted At" max_length="40" name="attempted_at" type="glide_date_time"/>
+        <element choice="3" label="Direction" max_length="40" name="direction" type="string">
+            <choice>
+                <element inactive_on_update="false" label="Outbound" value="outbound"/>
+                <element inactive_on_update="false" label="Inbound" value="inbound"/>
+            </choice>
+        </element>
+        <element choice="3" label="Status" max_length="40" name="status" type="string">
+            <choice>
+                <element inactive_on_update="false" label="Success" value="success"/>
+                <element inactive_on_update="false" label="Failure" value="failure"/>
+                <element inactive_on_update="false" label="Pending" value="pending"/>
+            </choice>
+        </element>
+        <index name="index">
+            <element name="asset"/>
+        </index>
+    </element>
+</database>

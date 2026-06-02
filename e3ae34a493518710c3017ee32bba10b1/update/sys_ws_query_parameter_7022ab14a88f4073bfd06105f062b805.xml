@@ -1,12 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ws_query_parameter">
-  <sys_ws_query_parameter action="INSERT_OR_UPDATE">
-    <sys_id>7022ab14a88f4073bfd06105f062b805</sys_id>
-    <sys_scope display_value="x_848842_techdesk">e3ae34a493518710c3017ee32bba10b1</sys_scope>
-    <sys_update_name>sys_ws_query_parameter_7022ab14a88f4073bfd06105f062b805</sys_update_name>
-    <example_value/>
-    <name>asset_tag</name>
-    <required>false</required>
-    <short_description/>
-    <web_service_definition>329f7aaa3996498285d05f864a694dcc</web_service_definition>
-  </sys_ws_query_parameter>
+    <sys_ws_query_parameter action="INSERT_OR_UPDATE">
+        <example_value/>
+        <name>asset_tag</name>
+        <required>false</required>
+        <short_description/>
+        <sys_class_name>sys_ws_query_parameter</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-06-02 10:45:31</sys_created_on>
+        <sys_id>7022ab14a88f4073bfd06105f062b805</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>asset_tag</sys_name>
+        <sys_package display_value="TechDesk" source="x_848842_techdesk">e3ae34a493518710c3017ee32bba10b1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="TechDesk">e3ae34a493518710c3017ee32bba10b1</sys_scope>
+        <sys_update_name>sys_ws_query_parameter_7022ab14a88f4073bfd06105f062b805</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-06-02 10:45:31</sys_updated_on>
+        <web_service_definition display_value="TechDesk CMDB Integration">329f7aaa3996498285d05f864a694dcc</web_service_definition>
+    </sys_ws_query_parameter>
 </record_update>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_index">
+    <sys_index action="INSERT_OR_UPDATE">
+        <access_method/>
+        <col_name_string>asset_tag</col_name_string>
+        <index_col_name element="asset_tag" name="x_848842_techdesk_asset">9cfccfc95e084aa389365cd116aa4791</index_col_name>
+        <logical_table_name>x_848842_techdesk_asset</logical_table_name>
+        <sys_class_name>sys_index</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-06-02 10:45:27</sys_created_on>
+        <sys_id>02cc97a9e1394ba7bed5e1f75d3e3462</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_848842_techdesk_asset</sys_name>
+        <sys_package display_value="TechDesk" source="x_848842_techdesk">e3ae34a493518710c3017ee32bba10b1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="TechDesk">e3ae34a493518710c3017ee32bba10b1</sys_scope>
+        <sys_update_name>sys_index_02cc97a9e1394ba7bed5e1f75d3e3462</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-06-02 10:45:27</sys_updated_on>
+        <table/>
+        <unique_index>true</unique_index>
+    </sys_index>
+</record_update>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="75496ae1eede432faff574e4c45e5492" label="TechDesk Announcement" name="x_848842_techdesk_announcement" type="collection">
+        <element default="true" label="Active" max_length="40" name="active" type="boolean"/>
+        <element display="true" label="Title" mandatory="true" max_length="200" name="title" type="string"/>
+        <element label="Expires On" max_length="40" name="expires_on" type="glide_date"/>
+        <element label="Body" max_length="4000" name="body" type="string"/>
+    </element>
+</database>

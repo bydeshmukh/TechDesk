@@ -1,36 +1,34 @@
-<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script">
-  <sys_script action="INSERT_OR_UPDATE">
-    <sys_id>9f3595f5298747b1b864d5884cd14485</sys_id>
-    <sys_scope display_value="x_848842_techdesk">e3ae34a493518710c3017ee32bba10b1</sys_scope>
-    <sys_update_name>sys_script_9f3595f5298747b1b864d5884cd14485</sys_update_name>
-    <abort_action>false</abort_action>
-    <access>package_private</access>
-    <action_delete>false</action_delete>
-    <action_insert>false</action_insert>
-    <action_query>false</action_query>
-    <action_update>true</action_update>
-    <active>true</active>
-    <add_message>false</add_message>
-    <advanced>true</advanced>
-    <change_fields>false</change_fields>
-    <client_callable>false</client_callable>
-    <collection>x_848842_techdesk_request</collection>
-    <condition/>
-    <description/>
-    <execute_function>false</execute_function>
-    <filter_condition>stateINapproved,in_fulfillment,fulfilled</filter_condition>
-    <is_rest>false</is_rest>
-    <message/>
-    <name>Block edit after approval</name>
-    <order>200</order>
-    <priority>100</priority>
-    <rest_method/>
-    <rest_method_text/>
-    <rest_service/>
-    <rest_service_text/>
-    <rest_variables/>
-    <role_conditions/>
-    <script><![CDATA[(function executeRule(current, previous) {
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script">
+    <sys_script action="INSERT_OR_UPDATE">
+        <abort_action>false</abort_action>
+        <access>package_private</access>
+        <action_delete>false</action_delete>
+        <action_insert>false</action_insert>
+        <action_query>false</action_query>
+        <action_update>true</action_update>
+        <active>true</active>
+        <add_message>false</add_message>
+        <advanced>true</advanced>
+        <change_fields>false</change_fields>
+        <client_callable>false</client_callable>
+        <collection>x_848842_techdesk_request</collection>
+        <condition/>
+        <description/>
+        <execute_function>false</execute_function>
+        <filter_condition table="x_848842_techdesk_request">stateINapproved,in_fulfillment,fulfilled<item display_value="approved,in_fulfillment,fulfilled" endquery="false" field="state" goto="false" newquery="false" operator="IN" or="false" value="approved,in_fulfillment,fulfilled"/>
+        </filter_condition>
+        <is_rest>false</is_rest>
+        <message/>
+        <name>Block edit after approval</name>
+        <order>200</order>
+        <priority>100</priority>
+        <rest_method/>
+        <rest_method_text/>
+        <rest_service/>
+        <rest_service_text/>
+        <rest_variables/>
+        <role_conditions/>
+        <script><![CDATA[(function executeRule(current, previous) {
     try {
         if (!gs.hasRole('x_848842_techdesk.admin')) {
             if (current.request_type.changes() || current.requested_by.changes() || current.cost_estimate.changes()) {
@@ -43,8 +41,23 @@
     }
 })(current, previous);
 ]]></script>
-    <sys_policy/>
-    <template/>
-    <when>before</when>
-  </sys_script>
+        <sys_class_name>sys_script</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-06-02 10:45:27</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>9f3595f5298747b1b864d5884cd14485</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Block edit after approval</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="TechDesk" source="x_848842_techdesk">e3ae34a493518710c3017ee32bba10b1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="TechDesk">e3ae34a493518710c3017ee32bba10b1</sys_scope>
+        <sys_update_name>sys_script_9f3595f5298747b1b864d5884cd14485</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-06-02 10:45:27</sys_updated_on>
+        <template/>
+        <when>before</when>
+    </sys_script>
+    <sys_translated_text action="delete_multiple" query="documentkey=9f3595f5298747b1b864d5884cd14485"/>
 </record_update>

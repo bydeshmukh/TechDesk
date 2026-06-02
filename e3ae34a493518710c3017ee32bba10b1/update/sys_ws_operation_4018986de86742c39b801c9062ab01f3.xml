@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ws_operation">
+  <sys_ws_operation action="INSERT_OR_UPDATE">
+    <sys_id>4018986de86742c39b801c9062ab01f3</sys_id>
+    <sys_scope display_value="x_848842_techdesk">e3ae34a493518710c3017ee32bba10b1</sys_scope>
+    <sys_update_name>sys_ws_operation_4018986de86742c39b801c9062ab01f3</sys_update_name>
+    <active>true</active>
+    <consumes>application/json,application/xml,text/xml</consumes>
+    <consumes_customized>false</consumes_customized>
+    <default_operation_uri>/api/x_848842_techdesk/cmdb/sync_asset</default_operation_uri>
+    <enforce_acl>cf9d01d3e73003009d6247e603f6a990</enforce_acl>
+    <http_method>POST</http_method>
+    <name>Sync Asset</name>
+    <operation_script><![CDATA[(function process(request, response) {
+  try {
+    var body = request.body.data;
+
+    // Validate required fields
+    var errors = {};
+    if (!body.external_id) {
+      errors.external_id = 'external_id is required';
+    }
+    if (!body.asset_tag) {
+      errors.asset_tag = 'asset_tag is required';
+    }
+    if (!body.serial_number) {
+      errors.serial_number = 'serial_number is required';
+    }
+
+    if (Object.keys(errors).length > 0) {
+      response.setStatus(400);
+      response.setBody({ error: 'Validation failed', fields: errors });
+      return;
+    }
+
+    // Look up existing asset by asset_tag OR serial_number
+    var gr = new GlideRecord('x_848842_techdesk_asset');
+    gr.addEncodedQuery('asset_tag=' + body.asset_tag + '^ORserial_number=' + body.serial_number);
+    gr.query();
+
+    if (gr.next()) {
+      // Update existing record
+      gr.setValue('serial_number', body.serial_number);
+      if (body.lifecycle_state) {
+        gr.setValue('lifecycle_state', body.lifecycle_state);
+      }
+      gr.setValue('last_audit_date', new GlideDateTime().toString());
+      gr.update();
+
+      response.setStatus(200);
+      response.setBody({
+        status: 'updated',
+        sys_id: gr.getUniqueValue(),
+        asset_tag: gr.getValue('asset_tag')
+      });
+    } else {
+      // Create new record
+      var newGr = new GlideRecord('x_848842_techdesk_asset');
+      newGr.initialize();
+      newGr.setValue('asset_tag', body.asset_tag);
+      newGr.setValue('serial_number', body.serial_number);
+      if (body.external_id) {
+        newGr.setValue('external_id', body.external_id);
+      }
+      if (body.display_name) {
+        newGr.setValue('display_name', body.display_name);
+      }
+      if (body.asset_type) {
+        newGr.setValue('asset_type', body.asset_type);
+      }
+      if (body.lifecycle_state) {
+        newGr.setValue('lifecycle_state', body.lifecycle_state);
+      }
+      if (body.assigned_to) {
+        newGr.setValue('assigned_to', body.assigned_to);
+      }
+      if (body.location) {
+        newGr.setValue('location', body.location);
+      }
+      if (body.purchase_date) {
+        newGr.setValue('purchase_date', body.purchase_date);
+      }
+      if (body.warranty_expiry) {
+        newGr.setValue('warranty_expiry', body.warranty_expiry);
+      }
+      newGr.setValue('last_audit_date', new GlideDateTime().toString());
+      var sysId = newGr.insert();
+
+      response.setStatus(201);
+      response.setBody({
+        status: 'created',
+        sys_id: sysId,
+        asset_tag: body.asset_tag
+      });
+    }
+  } catch (e) {
+    gs.error('TechDesk CMDB Sync Asset error: ' + e.message);
+    response.setStatus(500);
+    response.setBody({ error: 'Internal server error', message: e.message });
+  }
+})(request, response);
+]]></operation_script>
+    <operation_uri>/api/x_848842_techdesk/v1/cmdb/sync_asset</operation_uri>
+    <produces>application/json,application/xml,text/xml</produces>
+    <produces_customized>false</produces_customized>
+    <relative_path>/sync_asset</relative_path>
+    <request_example/>
+    <requires_acl_authorization>true</requires_acl_authorization>
+    <requires_authentication>true</requires_authentication>
+    <requires_snc_internal_role>true</requires_snc_internal_role>
+    <short_description/>
+    <sys_policy/>
+    <web_service_definition>329f7aaa3996498285d05f864a694dcc</web_service_definition>
+    <web_service_version>08f8d47ab78e4224a10f8f6f205b7b9c</web_service_version>
+  </sys_ws_operation>
+</record_update>

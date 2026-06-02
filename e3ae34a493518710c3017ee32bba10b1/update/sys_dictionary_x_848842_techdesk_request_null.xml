@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_dictionary">
+  <sys_dictionary action="INSERT_OR_UPDATE" element="" table="x_848842_techdesk_request">
+    <sys_id>7e3f1ef31da04a048d46798d9419bfe8</sys_id>
+    <sys_scope display_value="x_848842_techdesk">e3ae34a493518710c3017ee32bba10b1</sys_scope>
+    <sys_update_name>sys_dictionary_x_848842_techdesk_request_null</sys_update_name>
+    <active>true</active>
+    <attributes/>
+    <audit>true</audit>
+    <element/>
+    <internal_type>collection</internal_type>
+    <name>x_848842_techdesk_request</name>
+    <read_only>false</read_only>
+    <text_index>false</text_index>
+  </sys_dictionary>
+</record_update>

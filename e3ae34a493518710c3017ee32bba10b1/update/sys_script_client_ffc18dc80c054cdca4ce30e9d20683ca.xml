@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_client">
+  <sys_script_client action="INSERT_OR_UPDATE">
+    <sys_id>ffc18dc80c054cdca4ce30e9d20683ca</sys_id>
+    <sys_scope display_value="x_848842_techdesk">e3ae34a493518710c3017ee32bba10b1</sys_scope>
+    <sys_update_name>sys_script_client_ffc18dc80c054cdca4ce30e9d20683ca</sys_update_name>
+    <active>true</active>
+    <applies_extended>false</applies_extended>
+    <description/>
+    <field/>
+    <global>true</global>
+    <isolate_script>false</isolate_script>
+    <messages/>
+    <name>Mandatory justification</name>
+    <script><![CDATA[function onSubmit() {
+    var costEstimate = parseFloat(g_form.getValue('cost_estimate'));
+    var justification = g_form.getValue('business_justification');
+
+    if (costEstimate > 1000 && !justification) {
+        g_form.showErrorBox('business_justification', 'Business justification is required for requests over $1,000');
+        return false;
+    }
+
+    return true;
+}
+]]></script>
+    <table>x_848842_techdesk_request</table>
+    <type>onSubmit</type>
+    <ui_type>0</ui_type>
+    <view/>
+  </sys_script_client>
+</record_update>

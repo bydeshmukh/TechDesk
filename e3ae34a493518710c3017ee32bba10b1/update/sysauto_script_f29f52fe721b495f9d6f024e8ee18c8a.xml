@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sysauto_script">
+  <sysauto_script action="INSERT_OR_UPDATE">
+    <sys_id>f29f52fe721b495f9d6f024e8ee18c8a</sys_id>
+    <sys_scope display_value="x_848842_techdesk">e3ae34a493518710c3017ee32bba10b1</sys_scope>
+    <sys_update_name>sysauto_script_f29f52fe721b495f9d6f024e8ee18c8a</sys_update_name>
+    <active>true</active>
+    <advanced>false</advanced>
+    <business_calendar/>
+    <condition/>
+    <conditional>false</conditional>
+    <entered_run_end/>
+    <entered_run_start/>
+    <entered_time>1970-01-01 08:00:00</entered_time>
+    <max_drift/>
+    <name>Overdue Audit Alert</name>
+    <offset/>
+    <offset_type>0</offset_type>
+    <repeat_every/>
+    <run_as/>
+    <run_as_tz/>
+    <run_dayofmonth>1</run_dayofmonth>
+    <run_dayofweek>1</run_dayofweek>
+    <run_daysofweek>1</run_daysofweek>
+    <run_end/>
+    <run_month>1</run_month>
+    <run_period/>
+    <run_start>2026-06-02 10:44:15</run_start>
+    <run_time>1970-01-01 08:00:00</run_time>
+    <run_type>weekly</run_type>
+    <run_weekinmonth>1</run_weekinmonth>
+    <script><![CDATA[(function() {
+    var today = new GlideDateTime();
+    today.addDaysUTC(-180);
+    var cutoffDate = today.getDate().toString();
+
+    var gr = new GlideRecord('x_848842_techdesk_asset');
+    gr.addQuery('lifecycle_state', 'deployed');
+    gr.addQuery('last_audit_date', '<', cutoffDate);
+    gr.query();
+
+    var count = gr.getRowCount();
+    gs.info('TechDesk Overdue Audit Alert: Found ' + count + ' assets with audits overdue by more than 180 days');
+})();
+]]></script>
+    <sys_policy/>
+    <time_zone/>
+    <upgrade_safe>false</upgrade_safe>
+  </sysauto_script>
+</record_update>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_user_role">
+  <sys_user_role action="INSERT_OR_UPDATE">
+    <sys_id>9110a530d61c4b6a85152a7b8dbfb5ba</sys_id>
+    <sys_scope display_value="x_848842_techdesk">e3ae34a493518710c3017ee32bba10b1</sys_scope>
+    <sys_update_name>sys_user_role_9110a530d61c4b6a85152a7b8dbfb5ba</sys_update_name>
+    <assignable_by/>
+    <can_delegate>true</can_delegate>
+    <description>Full access, configure everything</description>
+    <elevated_privilege>false</elevated_privilege>
+    <grantable>true</grantable>
+    <name>x_848842_techdesk.admin</name>
+    <scoped_admin>true</scoped_admin>
+    <suffix>admin</suffix>
+  </sys_user_role>
+</record_update>

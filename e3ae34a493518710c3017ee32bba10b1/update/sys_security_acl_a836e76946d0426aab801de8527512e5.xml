@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl">
+  <sys_security_acl action="INSERT_OR_UPDATE">
+    <sys_id>a836e76946d0426aab801de8527512e5</sys_id>
+    <sys_scope display_value="x_848842_techdesk">e3ae34a493518710c3017ee32bba10b1</sys_scope>
+    <sys_update_name>sys_security_acl_a836e76946d0426aab801de8527512e5</sys_update_name>
+    <active>true</active>
+    <admin_overrides>true</admin_overrides>
+    <advanced>false</advanced>
+    <applies_to/>
+    <condition/>
+    <decision_type>allow</decision_type>
+    <description>Manager: Read all requests</description>
+    <local_or_existing>Local</local_or_existing>
+    <name>x_848842_techdesk_request</name>
+    <operation>read</operation>
+    <script/>
+    <security_attribute/>
+    <sys_policy/>
+    <type>record</type>
+  </sys_security_acl>
+</record_update>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_client">
+  <sys_script_client action="INSERT_OR_UPDATE">
+    <sys_id>f8021e585a01473aa6adb5696078207b</sys_id>
+    <sys_scope display_value="x_848842_techdesk">e3ae34a493518710c3017ee32bba10b1</sys_scope>
+    <sys_update_name>sys_script_client_f8021e585a01473aa6adb5696078207b</sys_update_name>
+    <active>true</active>
+    <applies_extended>false</applies_extended>
+    <description/>
+    <field>cost_estimate</field>
+    <global>true</global>
+    <isolate_script>false</isolate_script>
+    <messages/>
+    <name>Show cost warning</name>
+    <script><![CDATA[function onChange(control, oldValue, newValue, isLoading) {
+    if (isLoading) {
+        return;
+    }
+
+    var cost = parseFloat(newValue);
+
+    if (cost > 5000) {
+        g_form.showFieldMsg('cost_estimate', 'Requests over $5,000 require VP-level approval', 'info');
+    } else {
+        g_form.hideFieldMsg('cost_estimate');
+    }
+}
+]]></script>
+    <table>x_848842_techdesk_request</table>
+    <type>onChange</type>
+    <ui_type>0</ui_type>
+    <view/>
+  </sys_script_client>
+</record_update>

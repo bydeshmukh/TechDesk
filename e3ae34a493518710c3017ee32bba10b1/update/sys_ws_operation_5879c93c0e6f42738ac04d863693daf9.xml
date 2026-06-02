@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ws_operation">
+  <sys_ws_operation action="INSERT_OR_UPDATE">
+    <sys_id>5879c93c0e6f42738ac04d863693daf9</sys_id>
+    <sys_scope display_value="x_848842_techdesk">e3ae34a493518710c3017ee32bba10b1</sys_scope>
+    <sys_update_name>sys_ws_operation_5879c93c0e6f42738ac04d863693daf9</sys_update_name>
+    <active>true</active>
+    <consumes>application/json,application/xml,text/xml</consumes>
+    <consumes_customized>false</consumes_customized>
+    <default_operation_uri>/api/x_848842_techdesk/cmdb/asset/{asset_tag}</default_operation_uri>
+    <enforce_acl>cf9d01d3e73003009d6247e603f6a990</enforce_acl>
+    <http_method>PATCH</http_method>
+    <name>Update Asset</name>
+    <operation_script><![CDATA[(function process(request, response) {
+  try {
+    var assetTag = request.pathParams['asset_tag'];
+    var body = request.body.data;
+
+    // Reject updates to immutable asset_tag field
+    if (body.asset_tag !== undefined) {
+      response.setStatus(400);
+      response.setBody({ error: 'The asset_tag field is immutable and cannot be updated' });
+      return;
+    }
+
+    var gr = new GlideRecord('x_848842_techdesk_asset');
+    gr.addQuery('asset_tag', assetTag);
+    gr.query();
+
+    if (!gr.next()) {
+      response.setStatus(404);
+      response.setBody({ error: 'Asset not found' });
+      return;
+    }
+
+    // Update only provided fields
+    var allowedFields = [
+      'display_name', 'asset_type', 'lifecycle_state', 'serial_number',
+      'assigned_to', 'location', 'purchase_date', 'warranty_expiry',
+      'last_audit_date', 'external_id'
+    ];
+
+    for (var i = 0; i < allowedFields.length; i++) {
+      var field = allowedFields[i];
+      if (body[field] !== undefined) {
+        gr.setValue(field, body[field]);
+      }
+    }
+
+    gr.update();
+
+    response.setStatus(200);
+    response.setBody({
+      status: 'updated',
+      sys_id: gr.getUniqueValue(),
+      asset_tag: gr.getValue('asset_tag')
+    });
+  } catch (e) {
+    gs.error('TechDesk CMDB Update Asset error: ' + e.message);
+    response.setStatus(500);
+    response.setBody({ error: 'Internal server error', message: e.message });
+  }
+})(request, response);
+]]></operation_script>
+    <operation_uri>/api/x_848842_techdesk/v1/cmdb/asset/{asset_tag}</operation_uri>
+    <produces>application/json,application/xml,text/xml</produces>
+    <produces_customized>false</produces_customized>
+    <relative_path>/asset/{asset_tag}</relative_path>
+    <request_example/>
+    <requires_acl_authorization>true</requires_acl_authorization>
+    <requires_authentication>true</requires_authentication>
+    <requires_snc_internal_role>true</requires_snc_internal_role>
+    <short_description/>
+    <sys_policy/>
+    <web_service_definition>329f7aaa3996498285d05f864a694dcc</web_service_definition>
+    <web_service_version>08f8d47ab78e4224a10f8f6f205b7b9c</web_service_version>
+  </sys_ws_operation>
+</record_update>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl">
+  <sys_security_acl action="INSERT_OR_UPDATE">
+    <sys_id>4f15d410362a43338e83536a80df2d34</sys_id>
+    <sys_scope display_value="x_848842_techdesk">e3ae34a493518710c3017ee32bba10b1</sys_scope>
+    <sys_update_name>sys_security_acl_4f15d410362a43338e83536a80df2d34</sys_update_name>
+    <active>true</active>
+    <admin_overrides>true</admin_overrides>
+    <advanced>false</advanced>
+    <applies_to/>
+    <condition/>
+    <decision_type>allow</decision_type>
+    <description>Admin: Delete requests</description>
+    <local_or_existing>Local</local_or_existing>
+    <name>x_848842_techdesk_request</name>
+    <operation>delete</operation>
+    <script/>
+    <security_attribute/>
+    <sys_policy/>
+    <type>record</type>
+  </sys_security_acl>
+</record_update>

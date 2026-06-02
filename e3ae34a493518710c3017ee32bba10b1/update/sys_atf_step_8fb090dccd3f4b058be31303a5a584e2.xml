@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_atf_step">
+  <sys_atf_step action="INSERT_OR_UPDATE">
+    <sys_id>8fb090dccd3f4b058be31303a5a584e2</sys_id>
+    <sys_scope display_value="x_848842_techdesk">e3ae34a493518710c3017ee32bba10b1</sys_scope>
+    <active>true</active>
+    <description/>
+    <display_name>Record Validation</display_name>
+    <notes/>
+    <order>2</order>
+    <step_config>1f39a288df60220062fe6c7a4df2639d</step_config>
+    <table>x_848842_techdesk_request</table>
+    <test>1dd38d46ad564e328ed0984e82220926</test>
+    <timeout>1970-01-01 00:00:05</timeout>
+    <warning_message/>
+  </sys_atf_step>
+  <sys_variable_value action="delete_multiple" query="document_key=8fb090dccd3f4b058be31303a5a584e2"/>
+  <sys_variable_value action="INSERT_OR_UPDATE">
+    <sys_id>8aa9eba199d04647b38df5ff3465930a</sys_id>
+    <document>sys_atf_step</document>
+    <document_key>8fb090dccd3f4b058be31303a5a584e2</document_key>
+    <value>{{step['0070f4b64ac24218a5e05af7a483beb1'].record_id}}</value>
+    <variable>52ed1e5b5360220002c6435723dc3421</variable>
+    <order>200</order>
+  </sys_variable_value>
+  <sys_variable_value action="INSERT_OR_UPDATE">
+    <sys_id>d4f72e1351f64064a511f68a9b15cf36</sys_id>
+    <document>sys_atf_step</document>
+    <document_key>8fb090dccd3f4b058be31303a5a584e2</document_key>
+    <value>record_validated</value>
+    <variable>67400008676003007ba405225685efa4</variable>
+    <order>100</order>
+  </sys_variable_value>
+  <sys_variable_value action="INSERT_OR_UPDATE">
+    <sys_id>ae77db37e87d4aeb95595a482c249543</sys_id>
+    <document>sys_atf_step</document>
+    <document_key>8fb090dccd3f4b058be31303a5a584e2</document_key>
+    <value>x_848842_techdesk_request</value>
+    <variable>6aad5a575360220002c6435723dc34b0</variable>
+    <order>100</order>
+  </sys_variable_value>
+  <sys_variable_value action="INSERT_OR_UPDATE">
+    <sys_id>11c970dc908548ca95fb9c357a59bd35</sys_id>
+    <document>sys_atf_step</document>
+    <document_key>8fb090dccd3f4b058be31303a5a584e2</document_key>
+    <value>0</value>
+    <variable>cbddfa135320220002c6435723dc3415</variable>
+    <order>10</order>
+  </sys_variable_value>
+  <sys_variable_value action="INSERT_OR_UPDATE">
+    <sys_id>7977c41544894df08e3ceddc8a0c0643</sys_id>
+    <document>sys_atf_step</document>
+    <document_key>8fb090dccd3f4b058be31303a5a584e2</document_key>
+    <value>short_description=Test Request^request_type=hardware^priority=3^state=draft</value>
+    <variable>ff6e125353a0220002c6435723dc3442</variable>
+    <order>300</order>
+  </sys_variable_value>
+  <sys_element_mapping action="delete_multiple" query="id=8fb090dccd3f4b058be31303a5a584e2"/>
+  <sys_element_mapping action="INSERT_OR_UPDATE">
+    <sys_id>0d56bcae740a4e39ae48e5d8b2e23a26</sys_id>
+    <field>record_id</field>
+    <id>8fb090dccd3f4b058be31303a5a584e2</id>
+    <table>var__m_atf_input_variable_1f39a288df60220062fe6c7a4df2639d</table>
+    <value>{{step['0070f4b64ac24218a5e05af7a483beb1'].record_id}}</value>
+  </sys_element_mapping>
+</record_update>

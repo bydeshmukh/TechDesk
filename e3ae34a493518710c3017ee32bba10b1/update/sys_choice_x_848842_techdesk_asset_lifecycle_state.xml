@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+  <sys_choice_set field="lifecycle_state" table="x_848842_techdesk_asset">
+    <sys_choice action="INSERT_OR_UPDATE">
+      <sys_id>1d0074b11b8340cf83485ce7e0a4bae8</sys_id>
+      <name>x_848842_techdesk_asset</name>
+      <element>lifecycle_state</element>
+      <label>Requested</label>
+      <value>requested</value>
+      <inactive>false</inactive>
+      <inactive_on_update>false</inactive_on_update>
+      <language>en</language>
+    </sys_choice>
+    <sys_choice action="INSERT_OR_UPDATE">
+      <sys_id>6a0f0110033e494e87e7e6fe07077058</sys_id>
+      <name>x_848842_techdesk_asset</name>
+      <element>lifecycle_state</element>
+      <label>Ordered</label>
+      <value>ordered</value>
+      <inactive>false</inactive>
+      <inactive_on_update>false</inactive_on_update>
+      <language>en</language>
+    </sys_choice>
+    <sys_choice action="INSERT_OR_UPDATE">
+      <sys_id>b8c39f099f0a420ea3b56f5b50ce4116</sys_id>
+      <name>x_848842_techdesk_asset</name>
+      <element>lifecycle_state</element>
+      <label>Received</label>
+      <value>received</value>
+      <inactive>false</inactive>
+      <inactive_on_update>false</inactive_on_update>
+      <language>en</language>
+    </sys_choice>
+    <sys_choice action="INSERT_OR_UPDATE">
+      <sys_id>7891d19d31d94e62b93e6eddd7617183</sys_id>
+      <name>x_848842_techdesk_asset</name>
+      <element>lifecycle_state</element>
+      <label>In Stock</label>
+      <value>in_stock</value>
+      <inactive>false</inactive>
+      <inactive_on_update>false</inactive_on_update>
+      <language>en</language>
+    </sys_choice>
+    <sys_choice action="INSERT_OR_UPDATE">
+      <sys_id>aac498af879b4abca22cfa6f166111bc</sys_id>
+      <name>x_848842_techdesk_asset</name>
+      <element>lifecycle_state</element>
+      <label>Deployed</label>
+      <value>deployed</value>
+      <inactive>false</inactive>
+      <inactive_on_update>false</inactive_on_update>
+      <language>en</language>
+    </sys_choice>
+    <sys_choice action="INSERT_OR_UPDATE">
+      <sys_id>571e3ed3d1fb4bf89d331c3d3b90fa10</sys_id>
+      <name>x_848842_techdesk_asset</name>
+      <element>lifecycle_state</element>
+      <label>In Repair</label>
+      <value>in_repair</value>
+      <inactive>false</inactive>
+      <inactive_on_update>false</inactive_on_update>
+      <language>en</language>
+    </sys_choice>
+    <sys_choice action="INSERT_OR_UPDATE">
+      <sys_id>14eb2f99ca8e4ff0944b962962b6dae2</sys_id>
+      <name>x_848842_techdesk_asset</name>
+      <element>lifecycle_state</element>
+      <label>Retired</label>
+      <value>retired</value>
+      <inactive>false</inactive>
+      <inactive_on_update>false</inactive_on_update>
+      <language>en</language>
+    </sys_choice>
+    <sys_choice action="INSERT_OR_UPDATE">
+      <sys_id>4e6274e61780436eac2dfd97e4b09ee7</sys_id>
+      <name>x_848842_techdesk_asset</name>
+      <element>lifecycle_state</element>
+      <label>Disposed</label>
+      <value>disposed</value>
+      <inactive>false</inactive>
+      <inactive_on_update>false</inactive_on_update>
+      <language>en</language>
+    </sys_choice>
+    <sys_choice_set action="INSERT_OR_UPDATE">
+      <sys_id>5dd5f22fd269455bb90e6f0e6d6c46c5</sys_id>
+      <sys_scope display_value="x_848842_techdesk">e3ae34a493518710c3017ee32bba10b1</sys_scope>
+      <name>x_848842_techdesk_asset</name>
+      <element>lifecycle_state</element>
+    </sys_choice_set>
+  </sys_choice_set>
+</record_update>

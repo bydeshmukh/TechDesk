@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_app_module">
+  <sys_app_module action="INSERT_OR_UPDATE">
+    <sys_id>b96363b42cb141b3ab2abaf4e812438d</sys_id>
+    <sys_scope display_value="x_848842_techdesk">e3ae34a493518710c3017ee32bba10b1</sys_scope>
+    <sys_update_name>sys_app_module_b96363b42cb141b3ab2abaf4e812438d</sys_update_name>
+    <active>true</active>
+    <application>9d84c84ae7f3443dbde821fca4aea63d</application>
+    <filter>stateNOT INfulfilled,rejected,cancelled</filter>
+    <hint>View open TechDesk requests</hint>
+    <link_type>LIST</link_type>
+    <name>x_848842_techdesk_request</name>
+    <order>300</order>
+    <title>Open Requests</title>
+  </sys_app_module>
+</record_update>

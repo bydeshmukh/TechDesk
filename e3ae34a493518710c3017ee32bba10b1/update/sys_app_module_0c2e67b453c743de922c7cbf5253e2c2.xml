@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_app_module">
+  <sys_app_module action="INSERT_OR_UPDATE">
+    <sys_id>0c2e67b453c743de922c7cbf5253e2c2</sys_id>
+    <sys_scope display_value="x_848842_techdesk">e3ae34a493518710c3017ee32bba10b1</sys_scope>
+    <sys_update_name>sys_app_module_0c2e67b453c743de922c7cbf5253e2c2</sys_update_name>
+    <active>true</active>
+    <application>9d84c84ae7f3443dbde821fca4aea63d</application>
+    <filter>lifecycle_state=deployed</filter>
+    <hint>View deployed assets</hint>
+    <link_type>LIST</link_type>
+    <name>x_848842_techdesk_asset</name>
+    <order>700</order>
+    <title>Deployed Assets</title>
+  </sys_app_module>
+</record_update>

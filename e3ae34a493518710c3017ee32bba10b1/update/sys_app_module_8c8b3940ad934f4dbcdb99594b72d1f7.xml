@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_app_module">
+  <sys_app_module action="INSERT_OR_UPDATE">
+    <sys_id>8c8b3940ad934f4dbcdb99594b72d1f7</sys_id>
+    <sys_scope display_value="x_848842_techdesk">e3ae34a493518710c3017ee32bba10b1</sys_scope>
+    <sys_update_name>sys_app_module_8c8b3940ad934f4dbcdb99594b72d1f7</sys_update_name>
+    <active>true</active>
+    <application>9d84c84ae7f3443dbde821fca4aea63d</application>
+    <hint>View external CMDB synchronization logs</hint>
+    <link_type>LIST</link_type>
+    <name>x_848842_techdesk_sync_log</name>
+    <order>1100</order>
+    <roles>x_848842_techdesk.admin</roles>
+    <title>Sync Logs</title>
+  </sys_app_module>
+</record_update>
